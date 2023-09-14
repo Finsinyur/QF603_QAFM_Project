@@ -1,2 +1,4 @@
 # Ignore all csvs
-*.csv
+opvol_20130301_20230228.csv
+spx_20130301_20230228.csv
+vix_20130301_20230228.csv
