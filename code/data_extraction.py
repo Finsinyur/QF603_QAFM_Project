@@ -94,7 +94,9 @@ for date in dates:
 
     end_dates =\
     [
-        end_date
+        (
+            end_date + timedelta(days = 2)
+            )
         .strftime("%d/%m/%Y")
     ]*len(target_isins)
 
