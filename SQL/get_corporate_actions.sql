@@ -29,7 +29,7 @@ ON
     A.primqtinfocode = C.infocode
 
 INNER JOIN
-    tr_ds_equities.xref D
+    tr_ds_equities.ds2xref D
 ON
     C.actiontypecode = D.code
 
