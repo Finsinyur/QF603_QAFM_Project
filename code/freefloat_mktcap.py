@@ -123,7 +123,7 @@ for date in dates:
     (
         freefloat_shares
         .to_csv(
-            f'../output/freefloat_marcap_{date}.csv',
+            f'../output/freefloat_marketcap/freefloat_marcap_{date}.csv',
             index = False
             )
     )
