@@ -4,8 +4,8 @@ Project Repository for QF603
 Team members:<br>
 - Abigail Choo
 - Jennifer Claudia Gozal
-- Lee Chew Peng
-- Ong Kuei Hsien
+- Lee Chew Peng (Caden)
+- Ong Kuei Hsien (Kenn)
 
 ## Project Objective
 
