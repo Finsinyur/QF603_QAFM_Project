@@ -24,7 +24,7 @@ db = wrds.Connection() # this will be used as a global variable
 # Read sql script for corporate actions
 query_corporate_actions =\
 (
-    read_sql_script('../SQL/get_corporate_actions.sql')
+    read_sql_script('./SQL/get_corporate_actions.sql')
 )
       
 
@@ -52,7 +52,7 @@ df =\
 (
     pd
     .read_csv(
-        "../output/ftse_largemid_rebalancing_summary.csv"
+        "./constituent_history/ftse_10y_rebal_records.csv"
     )
 )
 
@@ -65,14 +65,14 @@ for date in df['Post Date'].unique():
         list(df
              .loc[
                  df['Post Date'] == date,
-                 'ISIN\n'
+                 'ISIN'
                  ])
     )
 
     start_dates =\
     [
         (
-            datetime.strptime(date, "%Y-%m-%d")
+            datetime.strptime(date, "%d/%m/%Y")
             -
             timedelta(days = 28)
         ).strftime("%d/%m/%Y")
@@ -81,7 +81,7 @@ for date in df['Post Date'].unique():
     end_dates =\
     [
         (
-            datetime.strptime(date, "%Y-%m-%d")
+            datetime.strptime(date, "%d/%m/%Y")
             +
             timedelta(days = 28)
         ).strftime("%d/%m/%Y")
@@ -108,7 +108,7 @@ df_ca =\
     )
 )
 
-df_ca.to_csv("../output/corporate_actions_summary.csv")
+df_ca.to_csv("./output/corporate_actions_summary2.csv")
     
 
 
