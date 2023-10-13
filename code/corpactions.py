@@ -74,7 +74,7 @@ for date in df['Post Date'].unique():
         (
             datetime.strptime(date, "%d/%m/%Y")
             -
-            timedelta(days = 28)
+            timedelta(days = 60)
         ).strftime("%d/%m/%Y")
     ] * len(target_isins)
 
@@ -83,7 +83,7 @@ for date in df['Post Date'].unique():
         (
             datetime.strptime(date, "%d/%m/%Y")
             +
-            timedelta(days = 28)
+            timedelta(days = 60)
         ).strftime("%d/%m/%Y")
     ] * len(target_isins)
 
