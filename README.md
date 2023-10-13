@@ -26,3 +26,11 @@ We would be focusing on step 1 for the purpose of this project and steps 2 and 3
 
 In this project, we will be using Long short-term memory (LSTM) model to predict the price of the target stocks ahead of the rebalancing.
 
+## Project Highlight
+
+### Ex Post Analysis
+![IMG](./IMG/expost_summary.png)
+
+In order to ascertain that our hypothesis is true, and that there is an arbitrage opportunity to reap from index rebalancing, an ex-post analysis is conducted based on perfect hindsight on the index constituent changes. Based on data from 2013 - 2023, we observed statistical significant positive returns if one shorts stocks that exits FTSE100 (into FTSE250) and FTSE250 (into small cap) one week prior to rank day, or long stocks that enters FTSE100 (from FTSE250) and FTSE250 (from small cap) one day prior to rebalancing day.
+
+One may refer to `04_Post_Rebal_Analysis.ipynd` for more details. 
