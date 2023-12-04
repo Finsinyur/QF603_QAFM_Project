@@ -46,7 +46,27 @@ In addition, for the ex-post analysis the following stocks are excluded
 - Stocks that we are unable to obtain a reliable historical data on
 - All Q3 2023 rebalancing; at time of study we are unable to obtain 20 days after the rebalancing date
 
+### Tutorial - Refinitiv Datastream
+Credit: Caden Lee
+
+A Jupyter notebook with a tutorial on Refinitiv Datastream API (via WRDS) has been provided under the name `00_WRDS_tutorial_refinitiv_quant_analytics.ipynb`. In the tutorial, it covers some basic functions to query the information on available data tables, basic SQL scripts to extract stock prices and shares outstanding. This tutorial assumes that readers have active subscription to WRDS via their institutions, which also entails access to Refinitiv Datastream.
+
+Additional sql codes (relevant to Datastream) are provided as follows, under the `SQL` folder:
+- `get_corporate_actions.sql`: to draw corporate actions for a given ISIN, within a stipulated period
+- `get_freefloat.sql`: to draw consolidated market value and shares outstanding of a given ISIN
+- `get_historical_prices.sql`: to draw price history for a given ISIN, within a stipulated period
+
+
+### Extracting constituent change history in FTSE UK Indices from published report by LSEG
+Credit: Caden Lee
+
+All history of additions and deletions from the FTSE indices are available as a pdf report.
+A dedicated python script `code/read_const_history.py` was written to read the pdf and extract the relevant company names.
+The reports and the resulting csv are available in the folder `constituent_history`.
+
+
 ### Ex Post Analysis
+Credit: Caden Lee
 ![IMG](./IMG/expost_summary.png)
 
 In order to ascertain that our hypothesis is true, and that there is an arbitrage opportunity to reap from index rebalancing, an ex-post analysis is conducted based on perfect hindsight on the index constituent changes. Based on data from 2013 - 2023, we observed statistical significant positive returns if one shorts stocks that exits FTSE100 (into FTSE250) and FTSE250 (into small cap) one week prior to rank day, or long stocks that enters FTSE100 (from FTSE250) and FTSE250 (from small cap) one day prior to rebalancing day.
