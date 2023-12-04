@@ -1,6 +1,5 @@
 # Ignore all csvs
-opvol_20130301_20230228.csv
-spx_20130301_20230228.csv
-vix_20130301_20230228.csv
+output/
+FTSE/
 .DS_Store
 .ipynb_checkpoints
